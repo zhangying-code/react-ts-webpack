@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // "rootDir": "./src",
+    "sourceMap": true, // 开启sourcemap
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "strict": true
+  }
+}
+
+// {
+//   "compilerOptions": {
+//     "target": "es5",  // 编译成哪个版本的JS
+//     "lib": [    // 编译过程中需要的库
+//       "dom",
+//       "dom.iterable",
+//       "esnext"
+//     ],
+//     "allowJs": true,  // 允许编译JS文件
+//     "skipLibCheck": true, // 忽略所有的类型检查
+//     "esModuleInterop": true,  // 支持 CommonJS 和 ES 模块之间的互操作性
+//     "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+//     "strict": true, // 严格模式
+//     "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用
+//     "noFallthroughCasesInSwitch": true,
+//     "module": "esnext",   // 指定生成哪个模块系统代码
+//     "moduleResolution": "node", // 指定模块解析策略
+//     "resolveJsonModule": true,  // 支持导入 json 模块
+//     "isolatedModules": true,  // 提供额外的一些语法检查，如文件没有模块导出会报错
+//     "noEmit": true, // 只想使用tsc的类型检查作为函数时（当其他工具（例如Babel实际编译）时）使用它
+//     "jsx": "react-jsx"  // 支持JSX
+//   },
+//   "include": [
+//     "src"
+//   ]
+// }

@@ -1,7 +1,7 @@
 /*
  * @Author: Ying Zhang
  * @Date: 2021-11-18 18:26:53
- * @LastEditTime: 2021-11-19 11:11:24
+ * @LastEditTime: 2021-11-19 13:05:36
  * @LastEditors: Ying Zhang
  * @Description: 
  * @FilePath: /react-搭建/react/webpack.config.js
@@ -30,15 +30,15 @@ module.exports = {
       directory: path.join(__dirname, './dist'),
     },
 		compress: true, // 启用 gzip compression：
-		hot: true,
-		open: true,
+		hot: true, // 开启HotModuleReplacementPlugin
+		// open: true, // 打开新的浏览器
 		// port: 9090,
 		// proxy:{
 		// 	'/api':'http:localhost:8080'
 		// }
 	},
 	entry:{
-		app: './src/index.js'
+		app: './src/index.tsx'
 	},
 	output:{
 		path: path.resolve(__dirname, './dist'),
@@ -56,6 +56,11 @@ module.exports = {
 					}
 				}
 			},
+			{ // ts
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
 			// CSS, PostCSS, and Sass
 			{
 				test: /\.(scss|css)$/,
@@ -85,7 +90,7 @@ module.exports = {
 		}),
 		new CleanWebpackPlugin(),
 		new friendlyErrorsWebpackPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
+		new webpack.HotModuleReplacementPlugin(), // 只更新改动过的模块
 	]
 	
 }
